@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Card</title>
+    <link rel="stylesheet" href="additonal/styles.css">
+    <script src="additonal/script.js" defer></script>
+</head>
+<body>
+    <div class="card" id="musicCard">
+        <img src="additonal/song-cover.jpg" alt="Song cover" class="song-cover">
+        <div class="title">Cradles</div>
+        <div class="artist">Sub Urban</div>
+        <div class="controls">
+            <div class="time" id="currentTime">0:00</div>
+            <div class="progress-bar-container" onmousedown="startScrubbing(event)">
+                <div class="progress-bar" id="progressBar"></div>
+                <div class="scrubber" id="scrubber" style="display: none;"></div>
+            </div>
+            <div class="time" id="totalTime">0:00</div>
+            <div class="more-options" onclick="showCopyLinkOption()">
+                <i class="fas fa-ellipsis-h">⋮</i>
+            </div>
+            <button class="play-button" id="playButton" onclick="togglePlay()">
+                <i class="fas fa-play">▶</i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hidden audio element to load and play the song -->
+    <audio id="audio" src="additonal/spotifydown.com - Cradles.mp3"></audio>
+</body>
+</html>

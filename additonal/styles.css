@@ -1,0 +1,139 @@
+/* General styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+/* Card styles */
+.card {
+    background-color: #3b4252;
+    border-radius: 15px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative;
+}
+
+.song-cover {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.artist {
+    font-size: 16px;
+    color: #b0bec5;
+    margin-bottom: 10px;
+}
+
+/* Control styles */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #b0bec5;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #1ed760;
+    transition: width 0.1s linear;
+}
+
+.time {
+    font-size: 14px;
+    color: #b0bec5;
+    min-width: 35px;
+    text-align: center;
+}
+
+.play-button {
+    background-color: white;
+    color: #3b4252;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.more-options {
+    font-size: 20px;
+    color: #b0bec5;
+    cursor: pointer;
+}
+
+.copy-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3b4252;
+    background-color: white;
+    border: 2px solid #3b4252;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: auto;
+}
+
+.copy-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Scrubber styles */
+.scrubber {
+    position: absolute;
+    top: -4px;
+    width: 12px;
+    height: 12px;
+    background-color: #1ed760;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+.progress-bar-container:hover .scrubber {
+    display: block;
+}
